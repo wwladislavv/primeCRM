@@ -4,8 +4,13 @@ block links
 .header
     .header__logo
         a(href="/")
-            img(src="/images/logo.svg", alt="logo")
+            img(src="/images/logo.svg", alt="logo").full
+            img(src="/images/logo-cropped.svg", alt="logo").mobile
     .header__menu
+        .header__menu-trigger
+            span 
+            span    
+            span
         ul
             li
                 a(href="/solution") Solution
@@ -20,3 +25,6 @@ block links
             li 
                 button.button
                     | Login
+
+block scripts
+    script(src="./js/components/header/menu.js")

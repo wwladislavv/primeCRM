@@ -100,22 +100,26 @@ ul li {
 }
 
 .content {
+  max-width: calc(100% - 28px);
   width: 100%;
   margin: 0 auto;
 
+  @media (min-width: $sm) {
+    max-width: calc($sm - 28px);
+  }
   @media (min-width: $md) {
-    max-width: $md;
+    max-width: calc($md - 28px);
   }
   @media (min-width: $lg) {
-    max-width: $lg;
+    max-width: calc($lg - 28px);
   }
   @media (min-width: $x) {
-    max-width: $x;
+    max-width: calc($x - 28px);
   }
   @media (min-width: $xl) {
-    max-width: $xl
+    max-width: calc($xl - 28px);
   }
   @media (min-width: $xxl) {
-    max-width: $xxl;
+    max-width: calc($xxl - 28px);
   }
 }

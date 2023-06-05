@@ -1,21 +1,90 @@
 @import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+
+$headerMarginVertical: 54px;
+$headerMarginVerticalMobile: 34px;
 
 .header {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 54px 0;
-    &__logo {
-        height: 55px;
+    margin: $headerMarginVerticalMobile 0;
+
+    @media (min-width: $md) {
+        margin: $headerMarginVertical 0;
+    }
+
+    &__logo img.full {
+        display: none;
+        @media (min-width: $md) {
+            display: block;
+        }
+    }
+    &__logo img.mobile {
+        display: block;
+        @media (min-width: $md) {
+            display: none;
+        }
+    }
+    &__menu {
+        position: fixed;
+        right: 0;
+        top: $headerMarginVerticalMobile;
+        z-index: 10;
+        width: 200px;
+        height: calc(100% - $headerMarginVerticalMobile);
+        right: -200px;
+        transition: right 500ms;
+        @media (min-width: $md) {
+            top: $headerMarginVertical;
+            height: calc(100% - $headerMarginVertical);
+        }
+        @media (min-width: $x) {
+            position: static;
+            align-items: center;
+            width: 100%;
+        }
+        &.active {
+            right: 14px;
+        }
+        &-trigger {
+            position: absolute;
+            right: 230px;
+            top: 15px;
+            z-index: 11;
+            @media (min-width: $x) {
+                display: none;
+            }
+        }
+        &-trigger span {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: $color-primary-black;
+            margin: 3px 0px;
+            border-radius: 2px;
+        }
     }
     &__menu ul {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: column;
         list-style-type: none;
+        @media (min-width: $x) {
+            flex-direction: row;
+            transform: none;
+            justify-content: flex-end;
+        }
     }
     &__menu ul li {
-        margin-right: 45px;
+        margin-right: 0;
+        @media (min-width: $x) {
+            margin-right: 45px;
+        }
     }
     &__menu ul li:last-child {
         margin-right: 0;

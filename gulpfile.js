@@ -64,7 +64,7 @@ gulp.task('scss', function () {
 
 // Compile TypeScript to JavaScript
 gulp.task('typescript', function () {
-	return gulp.src('src/**/.ts')
+	return gulp.src('src/**/**/*.ts')
 		.pipe(typescript())
 		.pipe(gulp.dest('./dist/js'));
 });
@@ -80,7 +80,7 @@ gulp.task('img', function () {
 gulp.task('watch', function () {
 	gulp.watch('src/**/**/*.pug', gulp.series('pug', browserSyncReload));
 	gulp.watch('src/**/*.scss', gulp.series('scss', browserSyncReload));
-	gulp.watch('src/**/*.ts', gulp.series('typescript', browserSyncReload));
+	gulp.watch('src/**/**/*.ts', gulp.series('typescript', browserSyncReload));
 	gulp.watch('src/images/**/*.*', gulp.series('img', browserSyncReload));
 });
 
