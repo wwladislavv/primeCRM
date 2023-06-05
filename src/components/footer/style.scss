@@ -1,0 +1,33 @@
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+
+.footer {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 124px;
+    padding-bottom: 32px;
+    &__background {
+        position: absolute;
+        left: -50%;
+        top: 0;
+        z-index: -1;
+        width: 200%;
+        height: 100%;
+        background-color: $color-primary-black;
+    }
+
+    &__top  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 38px;
+        @media (min-width: $lg) {}
+    }
+    &__top-socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 28px;
+    }
+}

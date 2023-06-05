@@ -1,0 +1,10 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="28" cy="27.6586" rx="28" ry="27.5" fill="#F4E6FF"/>
+<path d="M33 20.1586H37.6594C37.8337 20.1573 38.0043 20.2163 38.1488 20.3278C38.2932 20.4394 38.4048 20.5983 38.4688 20.7836L40 25.1586" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 27.1586H33" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.5 35.1586C35.8807 35.1586 37 34.0393 37 32.6586C37 31.2779 35.8807 30.1586 34.5 30.1586C33.1193 30.1586 32 31.2779 32 32.6586C32 34.0393 33.1193 35.1586 34.5 35.1586Z" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.5 35.1586C22.8807 35.1586 24 34.0393 24 32.6586C24 31.2779 22.8807 30.1586 21.5 30.1586C20.1193 30.1586 19 31.2779 19 32.6586C19 34.0393 20.1193 35.1586 21.5 35.1586Z" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 32.1586H24" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.975 32.1586H16.85C16.6246 32.1586 16.4084 32.073 16.249 31.9206C16.0896 31.7682 16 31.5616 16 31.3461V19.9711C16 19.7556 16.0896 19.5489 16.249 19.3965C16.4084 19.2442 16.6246 19.1586 16.85 19.1586H33V30.0461" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33 25.1586H40V31.3808C40 31.5871 39.9078 31.7849 39.7437 31.9308C39.5796 32.0766 39.3571 32.1586 39.125 32.1586H36.9375" stroke="#A76FD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

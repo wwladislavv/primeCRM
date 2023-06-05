@@ -123,3 +123,72 @@ ul li {
     max-width: calc($xxl - 28px);
   }
 }
+
+.icon {
+  display: block;
+  height: 26px;
+  width: 26px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.icon.accept {
+  background-image: url('../../images/icons/accept.svg');
+}
+.icon.book {
+  background-image: url('../../images/icons/book.svg');
+}
+.icon.car {
+  background-image: url('../../images/icons/car.svg');
+}
+.icon.facebook {
+  background-image: url('../../images/icons/facebook.svg');
+}
+.icon.instagram {
+  background-image: url('../../images/icons/instagram.svg');
+}
+.icon.linkedin {
+  background-image: url('../../images/icons/linkedin.svg');
+}
+.icon.gear-inside {
+  background-image: url('../../images/icons/gear-inside.svg');
+}
+.icon.gear {
+  background-image: url('../../images/icons/gear.svg');
+}
+.icon.house {
+  background-image: url('../../images/icons/house.svg');
+}
+.icon.lamp {
+  background-image: url('../../images/icons/lamp.svg');
+}
+.icon.note {
+  background-image: url('../../images/icons/note.svg');
+}
+.icon.ok {
+  background-image: url('../../images/icons/ok.svg');
+}
+.icon.person {
+  background-image: url('../../images/icons/person.svg');
+}
+.icon.pie-chart {
+  background-image: url('../../images/icons/pie-chart.svg');
+}
+.icon.speakerphone-blue {
+  background-image: url('../../images/icons/speakerphone-blue.svg');
+}
+.icon.speakerphone {
+  background-image: url('../../images/icons/speakerphone.svg');
+}
+.icon.twitter {
+  background-image: url('../../images/icons/twitter.svg');
+}
+.icon.youtube {
+  background-image: url('../../images/icons/youtube.svg');
+}
+.icon.speaking-person {
+  background-image: url('../../images/icons/speaking-person.svg');
+}
+.icon.thumbsup {
+  background-image: url('../../images/icons/thumbsup.svg');
+}
