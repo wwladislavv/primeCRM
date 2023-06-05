@@ -1,0 +1,89 @@
+@import "./colors";
+@import "./variables";
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  font-family: $base-font-family;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $color-primary-black;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 133.2%;
+}
+h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 133.2%;
+}
+h3 {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 51px;
+}
+h4 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 129.7%;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: var(--color-secondary-black);
+}
+
+ul li {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 288.5%;
+  color: var(--color-secondary-black);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 14px 59px;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  color: #FFFFFF;
+  border-radius: 5px;
+  background-color: var(--color-primary-black);
+}
+.button.disabled {
+  background-color: #EAEAEA;
+  color: var(--color-secondary-black);
+}
+.button.primary {
+  background-color: var(--color-primary-blue);
+  color: var(--color-primary-black);
+}
