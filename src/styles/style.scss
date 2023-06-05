@@ -2,14 +2,18 @@
 @import "./variables";
 
 
-html,
-body {
-  height: 100%;
+html {
+  height: 100vh;
 }
 
 body {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 * {
@@ -96,7 +100,22 @@ ul li {
 }
 
 .content {
-  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+
+  @media (min-width: $md) {
+    max-width: $md;
+  }
+  @media (min-width: $lg) {
+    max-width: $lg;
+  }
+  @media (min-width: $x) {
+    max-width: $x;
+  }
+  @media (min-width: $xl) {
+    max-width: $xl
+  }
+  @media (min-width: $xxl) {
+    max-width: $xxl;
+  }
 }
