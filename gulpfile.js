@@ -9,7 +9,7 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
-// import changed from 'gulp-changed';
+import changed from 'gulp-changed';
 // import prettier from 'gulp-prettier';
 import autoprefixer from 'autoprefixer';
 
@@ -53,7 +53,7 @@ gulp.task('scss', function () {
 	const plugins = [autoprefixer({ grid: true })];
 	
 	return gulp
-		.src('src/**/*.scss')
+		.src('src/**/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(postcss(plugins))
@@ -66,18 +66,26 @@ gulp.task('scss', function () {
 gulp.task('typescript', function () {
 	return gulp.src('src/**/.ts')
 		.pipe(typescript())
-		.pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('img', function () {
+	return gulp
+			.src('src/images/**/*.*')
+			// .pipe(changed('./dist/images'))
+			.pipe(gulp.dest('./dist/images'));
 });
 
 // Watch for file changes
 gulp.task('watch', function () {
-	gulp.watch('src/**/*.pug', gulp.series('pug', browserSyncReload));
+	gulp.watch('src/**/**/*.pug', gulp.series('pug', browserSyncReload));
 	gulp.watch('src/**/*.scss', gulp.series('scss', browserSyncReload));
 	gulp.watch('src/**/*.ts', gulp.series('typescript', browserSyncReload));
+	gulp.watch('src/images/**/*.*', gulp.series('img', browserSyncReload));
 });
 
 // Default task
 gulp.task(
 	'default',
-	gulp.series(clean, 'pug', 'scss', 'typescript', gulp.parallel('watch', browserSyncInit))
+	gulp.series(clean, 'pug', 'scss', 'typescript', 'img', gulp.parallel('watch', browserSyncInit))
 );

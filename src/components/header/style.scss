@@ -1,0 +1,33 @@
+@import "../../styles/colors.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 54px 0;
+    &__logo {
+        height: 55px;
+    }
+    &__menu ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    &__menu ul li {
+        margin-right: 45px;
+    }
+    &__menu ul li:last-child {
+        margin-right: 0;
+    }
+    &__menu ul li a {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        color: $color-primary-black;
+        text-decoration: none;
+    }
+    &__menu ul li a:hover {
+        text-decoration: underline;
+    }
+}

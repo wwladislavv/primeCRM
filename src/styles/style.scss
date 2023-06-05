@@ -54,7 +54,7 @@ p {
   font-weight: 400;
   font-size: 20px;
   line-height: 160%;
-  color: var(--color-secondary-black);
+  color: $color-secondary-black
 }
 
 ul li {
@@ -63,7 +63,7 @@ ul li {
   font-weight: 400;
   font-size: 18px;
   line-height: 288.5%;
-  color: var(--color-secondary-black);
+  color: $color-primary-black;
 }
 
 .button {
@@ -74,16 +74,29 @@ ul li {
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
-  line-height: 160%;
+  line-height: 1;
   color: #FFFFFF;
   border-radius: 5px;
-  background-color: var(--color-primary-black);
+  background-color: $color-primary-black;
+  transition: color $transition-duration, background-color $transition-duration;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-green;
+    color: $color-primary-black;
+  }
+  .disabled {
+    background-color: #EAEAEA;
+    color: $color-secondary-black;
+  }
+  .primary {
+    background-color: $color-primary-blue;
+    color: var(--color-primary-black);
+  }
 }
-.button.disabled {
-  background-color: #EAEAEA;
-  color: var(--color-secondary-black);
-}
-.button.primary {
-  background-color: var(--color-primary-blue);
-  color: var(--color-primary-black);
+
+.content {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
