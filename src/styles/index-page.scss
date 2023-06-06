@@ -46,4 +46,66 @@
 
 .section-features {
     margin-top: 200px;
+    margin-bottom: 89px;
+
+    &__title {
+        margin-bottom: 14px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 133.2%;
+        color: #303030;
+        text-align: center;
+    }
+    &__description {
+        max-width: 870px;
+        margin: 0 auto 29px auto;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: $color-secondary-black;
+        text-align: center;
+    }
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 44px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 50px 47px;
+        width: 100%;
+        min-height: 222px;
+        background: rgba(244, 244, 244, 0.93);
+        box-shadow: inset -2.57262px 2.57262px 0px #FFFFFF;
+        border-radius: 10px;
+    }
+    &__card.active {
+        background: #FFFFFF;
+        box-shadow: 0px 28px 57px rgba(190, 190, 190, 0.25);
+    }
+    &__card-title {
+        margin: 0;
+        margin-top: 22px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+        text-transform: capitalize;
+        color: $color-primary-black;
+    }
+    &__card-description {
+        margin: 0;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: $color-secondary-black;
+    }
 }
