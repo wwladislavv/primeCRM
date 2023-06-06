@@ -12,12 +12,11 @@ html
             
 
     body    
+        include ../components/header/header.pug  
         div.content
-            include ../components/header/header.pug  
-            
             block bodyContent
 
-            include ../components/footer/footer.pug
+        include ../components/footer/footer.pug
     include ./base-scripts.pug
         block scripts
 
