@@ -1,0 +1,49 @@
+@import "./colors.scss";
+@import "./variables.scss";
+
+.section-heading {
+    padding-top: calc($headerHeight + $headerMarginVerticalMobile + calc($headerMarginVerticalMobile / 2));
+    border-bottom: 1px solid $color-secondary-gray;
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: 0;
+    }
+    &__content {
+        margin-top: 185px;
+        max-width: 632px;
+    }
+    &__title {
+        margin-bottom: 21px;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 133.2%;
+        color: $color-primary-black;
+    }
+    &__content span {
+        display: block;
+        margin-bottom: 32px;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 160%;
+        color: $color-secondary-black;
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 76px;
+    }
+    &__review {
+        max-width: 624px;
+        width: 100%;
+        padding: 56px 0;
+        border-top: 1px solid $color-secondary-gray;
+    }
+}
+
+.section-features {
+    margin-top: 200px;
+}

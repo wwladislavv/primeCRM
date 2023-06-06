@@ -2,6 +2,8 @@ doctype html
 
 html
     include ./base-head.pug
+        link(rel="stylesheet", href="./css/components/header/style.css")
+        link(rel="stylesheet", href="./css/components/footer/style.css")
         block links
 
         title
@@ -16,6 +18,6 @@ html
             block bodyContent
 
             include ../components/footer/footer.pug
-    //- include ./base-scripts.pug
-    block scripts
+    include ./base-scripts.pug
+        block scripts
 

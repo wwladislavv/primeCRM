@@ -1,20 +1,29 @@
 @import "../../styles/colors.scss";
 @import "../../styles/variables.scss";
 
-$headerMarginVertical: 54px;
-$headerMarginVerticalMobile: 34px;
-
 .header {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: $headerMarginVerticalMobile 0;
+    padding: $headerMarginVerticalMobile 0 calc($headerMarginVerticalMobile / 2) 0;
+    transition: background-color $transition-duration;
+    &.active {
+        background-color: $color-primary-blue;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
     @media (min-width: $md) {
-        margin: $headerMarginVertical 0;
+        padding: $headerMarginVertical 0 calc($headerMarginVertical / 2) 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__logo img.full {
@@ -30,16 +39,13 @@ $headerMarginVerticalMobile: 34px;
         }
     }
     &__menu {
-        position: fixed;
+        position: absolute;
         right: 0;
-        top: $headerMarginVerticalMobile;
+        top: 12px;
         z-index: 10;
         width: 200px;
-        height: calc(100% - $headerMarginVerticalMobile);
-        right: -200px;
-        transition: right 500ms;
+        height: 0;
         @media (min-width: $md) {
-            top: $headerMarginVertical;
             height: calc(100% - $headerMarginVertical);
         }
         @media (min-width: $x) {
@@ -48,12 +54,18 @@ $headerMarginVerticalMobile: 34px;
             width: 100%;
         }
         &.active {
-            right: 14px;
+            top: 12px;
+            visibility: visible;
+            opacity: 1;
+        }
+        &.active ul {
+            top: 48px;
+            visibility: visible;
+            opacity: 1;
         }
         &-trigger {
             position: absolute;
-            right: 230px;
-            top: 15px;
+            right: 0;
             z-index: 11;
             @media (min-width: $x) {
                 display: none;
@@ -69,12 +81,32 @@ $headerMarginVerticalMobile: 34px;
         }
     }
     &__menu ul {
+        position: absolute;
+        top: 0;
+        z-index: 1;
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: end;
         flex-direction: column;
+        height: 315px;
+        margin: 0;
+        padding: 12px;
+        border-radius: 0 0 12px 12px;
+        background-color: $color-primary-blue;
+        visibility: hidden;
+        opacity: 0;
         list-style-type: none;
+        transition: height $transition-duration,
+            top $transition-duration,
+            visibility $transition-duration,
+            opacity $transition-duration;
         @media (min-width: $x) {
+            position: static;
+            top: 0;
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            background-color: transparent;
             flex-direction: row;
             transform: none;
             justify-content: flex-end;

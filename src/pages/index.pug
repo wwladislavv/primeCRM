@@ -1,3 +1,23 @@
 extends ../common/page-base-template.pug
+
+block links
+    link(rel="stylesheet" href="./css/styles/index-page.css")
+
 block bodyContent
-    | Empty
+    section.section-heading
+        .section-heading__content
+            h1.section-heading__title
+                | The CRM Platform Your Whole Business Will Love
+            span
+                | Provide excellent customer service. Answer more tickets all-in-one Primarily software.
+            .section-heading__btns
+                button.button
+                    | Get Started
+                button.button.transparent.section-heading__btn--secondary
+                    | How it works
+        .section-heading__review
+            img(src="./images/five-star.png" alt="five star")
+        img.section-heading__bg(src="./images/heading-bg.png" alt="background")
+
+    section.section-features
+

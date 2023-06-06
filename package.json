@@ -21,6 +21,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "normalize.css": "^8.0.1",
     "sass": "^1.62.1"
   }
 }
